@@ -1,0 +1,44 @@
+Notes for service dogs scrape
+
+1) 3 divs in a row have font tag w/ this class:
+size12 ArialNarrow12
+
+First 2 of those divs are empty. Third one contains name of org (get text).
+
+2) Following div has font tag with this class:
+size10 Helvetica10
+The DIV ITSELF contains:
+align="right"
+
+Contains location (get text).
+
+3) Following div ALSO has font tag with this class:
+size10 Helvetica10
+
+Contains URL (get href contents). Text in the A element is inconsistent.
+
+4) Following div ALSO has font tag with this class:
+size10 Helvetica10
+Getting text from div will be okay, but see SNAG below.
+Cannot get text from font tag because multiple font tags are used inside the div.
+
+Contains description (get text).
+
+SNAG: Some orgs have one paragraph, some have multiple, for description. Each paragraph is a div, no p tags, many font tags <font face="">
+In between every two grafs is another div, empty.
+
+IDEA: use the 2 blank lines to signal end of descrip?
+
++++
+
+HOW TO START:
+
+Find the div that contains text
+"Support organizations"
+
+STOP when div contains text:
+"Service dog support organizations, housing advocacy"
+
++++
+
+Everything else is in the .ipynb file!
